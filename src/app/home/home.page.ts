@@ -11,19 +11,28 @@ import { SpotifyService } from '../spotify.service';
 export class HomePage {
 items:any[];
 
+
   constructor(public navCtrl: NavController,private spotifyService: SpotifyService) {
 
 }
 
 
 search(event:any){
-let value = event.target.value;
-console.log(value);
-this.spotifyService.searchArtists(value).subscribe(
+  let value = event.target.value;
+  console.log(value);
+  this.spotifyService.searchArtists(value).subscribe(
+    data=>{
+      this.items=data.artists.items;
+      console.log(data);
+    })
+  }
+
+searchAlbums(id){
+this.spotifyService.searchAlbums(id).subscribe(
 data=>{
-this.items=data.artists.items;
-console.log(data);
-})
+console.log(data)
+}
+)
 }
 
 
