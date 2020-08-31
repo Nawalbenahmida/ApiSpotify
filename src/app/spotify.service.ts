@@ -9,7 +9,7 @@ private baseUrl:string="https://api.spotify.com/v1";
 private searchUrl:string=this.baseUrl+'/search?q=';
 private albumsUrl:string=this.baseUrl+'/artists/';
 private albumUrl:string=this.baseUrl+'/albums/';
-private auth_token:string="Bearer BQCnB8kwmCeRynuEHSzqR6dvzMLomFK8nwNvKXHLmQMAzIn5VtpUZoZZKQ_6wHHnnBleFgnb1B6sC8n3dEX6SIzHMSE50-ZNLK1JR-5lNv8mJIACmqemejuFPLuJAXTSvuQhJdEQ1F2henh2LksEJ-avQlYYmNHs5wGLucJQZ_49i4leeu6jFg&refresh_token=AQAljicswy2kypRc9nnWpgJoGbydcPILwUdvOYCtwHjXDDvrKRyZqzmCiC6uGU0JAqnawHgG8575eIte4PIygyh6N0krItO0X5fvIiWQq5zK00yD8ARodvtZV-Kr0RorsBk";
+private auth_token:string="Bearer BQC_ZA7duaiqMW7P30C_mKvNRZaAQPzZZLBiJuknRN9eoawavJ_z69cJFrTJrgzFEDzCOqPPzRTCo3oMDLaBJR_kYAszSu6xCFP2ltqMyVVrDqiJsr1OOY4H2rA3PACBei_G3U0eoIAm00uWLbBlDBiHDEw6CV1VziRiz86JWJHu2jlrkLjwZg&refresh_token=AQBTM9wDWs1MKHEpKRqieLjMK1bg482SV7sVfp29k8VCyYa5C5zZEpqrQJMjxerWBb53lf7dUAmpzFCh4L0cFwjdtIbDL9VHUydJRQz7S-wYx49dL_jxo5-EvcWliSd_3x0";
 private requestHeader= new HttpHeaders().set('Content-Type','application/json')
 .append('Authorization',this.auth_token);
 

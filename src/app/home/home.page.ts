@@ -15,13 +15,14 @@ items:any[];
 
 }
 
+
 search(event:any){
 let value = event.target.value;
 console.log(value);
 this.spotifyService.searchArtists(value).subscribe(
 data=>{
 this.items=data.artists.items;
-
+console.log(data);
 })
 }
 
