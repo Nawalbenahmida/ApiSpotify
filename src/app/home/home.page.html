@@ -8,4 +8,12 @@
 
 <ion-content padding>
   <ion-searchbar (ionInput)="search($event)"></ion-searchbar>
+  <div *ngIf="items?.length>0">
+    <ion-list *ngFor="let i of items">
+      <ion-item>
+        <h1><img src="{{i.images[2].url}}" alt="">  {{i.name}}</h1>
+
+      </ion-item>
+    </ion-list>
+  </div>
 </ion-content>
