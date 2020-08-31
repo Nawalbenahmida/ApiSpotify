@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { NavController } from '@ionic/angular';
+import { SpotifyService } from '../spotify.service';
+
 
 @Component({
   selector: 'app-home',
@@ -6,7 +9,21 @@ import { Component } from '@angular/core';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
+items:any[];
 
-  constructor() {}
+  constructor(public navCtrl: NavController,private spotifyService: SpotifyService) {
+
+}
+
+search(event:any){
+let value = event.target.value;
+console.log(value);
+this.spotifyService.searchArtists(value).subscribe(
+data=>{
+this.items=data.artists.items;
+
+})
+}
+
 
 }
