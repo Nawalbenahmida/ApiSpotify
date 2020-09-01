@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController } from '@ionic/angular';
 import { SpotifyService } from '../spotify.service';
+import { AlbumsPage } from '../albums/albums.page';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -12,7 +14,7 @@ export class HomePage {
 items:any[];
 
 
-  constructor(public navCtrl: NavController,private spotifyService: SpotifyService) {
+  constructor(public navCtrl: NavController,private spotifyService: SpotifyService, private router: Router) {
 
 }
 
@@ -27,13 +29,13 @@ search(event:any){
     })
   }
 
-searchAlbums(id){
-this.spotifyService.searchAlbums(id).subscribe(
-data=>{
-console.log(data)
-}
-)
-}
+
+  searchAlbums(id:string, name:string){
+this.router.navigate(['/albums', {id:id, name:name}]);
+    // this.navCtrl.push(AlbumsPage,{id:id, name:name} )
+  }
+
+
 
 
 }

@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>detailAlbums</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+
+  <ion-thumbnail item-start  *ngIf="imageLink" style="
+    display: contents">
+<h2>{{album.name}}</h2>
+    <img src="{{imageLink.url}}">
+  </ion-thumbnail>
+
+  <div *ngIf="tracks?.length>0">
+    <ion-list *ngFor="let t of tracks">
+      <ion-item>
+        <h1>{{t.name}}</h1>
+        <button item-end  (click)="playTrack(t.preview_url)">Ecouter</button>
+      </ion-item>
+    </ion-list>
+  </div>
+
+</ion-content>
