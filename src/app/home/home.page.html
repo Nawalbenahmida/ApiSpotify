@@ -1,19 +1,40 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Spotify
+      <img class="logo" src="../../assets/img/logo.png">
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
+
+
+<ion-content padding >
   <ion-searchbar (ionInput)="search($event)"></ion-searchbar>
   <div *ngIf="items?.length>0">
     <ion-list *ngFor="let i of items">
-      <ion-item>
-        <button ion-button (click)="searchAlbums(i.id, i.name)" ><h1><img src="{{i.images[2].url}}" alt="">  {{i.name}}</h1></button>
-
-      </ion-item>
+      <div class="detail">
+        <button  (click)="searchAlbums(i.id, i.name)">
+          <h2><img class="artist"  src="{{i.images[2].url}}" >{{i.name}}</h2>
+        </button>
+      </div>
     </ion-list>
+  </div>
+<h1>Playlists populaires</h1>
+  <div class="cover">
+    <a href="#"><img   src="../../assets/img/summer.jpg">Votre Summer Flashback</a>
+    <a href="#"><img   src="../../assets/img/tube.jfif">Tubes de l'été</a>
+    <a href="#"><img   src="../../assets/img/dancefloor.jfif">Dancefloor Classics</a>
+    <a href="#"><img   src="../../assets/img/rnb.jfif">Suprême R&B</a>
+    <a href="#"><img   src="../../assets/img/fr.jfif">Classiques du rap français</a>
+    <a href="#"><img   src="../../assets/img/popu.jfif">Pop Urbaine</a>
+    <a href="#"><img   src="../../assets/img/ancienne.jfif">A l'ancienne</a>
+    <a href="#"><img   src="../../assets/img/hit.jfif">Hits du moment</a>
+    <a href="#"><img   src="../../assets/img/popp.jfif">Pop Party</a>
+    <a href="#"><img   src="../../assets/img/funk.jfif">Funk & Soul Classics</a>
+    <a href="#"><img   src="../../assets/img/hiphop.jfif">I Love My '90s Hip-Hop'</a>
+    <a href="#"><img   src="../../assets/img/annee.jfif">Années 2000</a>
+    <a href="#"><img   src="../../assets/img/afro.jfif">Afro Hits</a>
+    <a href="#"><img   src="../../assets/img/hitr.jfif">Hit Replay</a>
+    <a href="#"><img   src="../../assets/img/Lycricistes.jfif">Lycricistes</a>
   </div>
 </ion-content>

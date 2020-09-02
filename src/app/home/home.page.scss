@@ -1,3 +1,5 @@
+// -------------------------------------BODY---------------------------------------------------------
+
 #container {
   text-align: center;
 
@@ -16,12 +18,92 @@
 #container p {
   font-size: 16px;
   line-height: 22px;
-
   color: #8c8c8c;
-
   margin: 0;
 }
 
 #container a {
   text-decoration: none;
+}
+
+
+ion-content, ion-header{
+
+  --ion-background-color:#222326
+}
+
+ion-searchbar{
+  --ion-background-color: white;
+}
+
+div{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+// ---------------------------------------LOGO--------------------------------------------------
+
+.logo {
+  width: 20vh;
+}
+
+// ---------------------------------------HOME--------------------------------------------------
+
+h1{
+color: white;
+font-size: 25px;
+margin-left: 15vh;
+}
+
+ a{
+  font-size: 15px;
+  line-height: 3vh;
+  text-align: center;
+  text-decoration: none;
+}
+
+
+div.cover img{
+  width: 30vh;
+  border-radius: inherit;
+  margin: 20px
+}
+
+// ----------------------------------------IMG/HOVER----------------------------------------
+
+h2, a{
+  display: inline-grid;
+  color: white;
+}
+
+h2:hover,
+a:hover{
+  color: #1fc655
+}
+
+img:hover{
+  opacity: 0.5;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+// -------------------------------------------SEARCH---------------------------------
+
+img{
+  border-radius: 50vh;
+}
+
+button{
+  background-color: Transparent;
+  background-repeat:no-repeat;
+  border: none;
+  cursor:pointer;
+  overflow: hidden;
+  outline:none;
+  width: 40vh;
+}
+
+h2{
+font-size: 20px;
+line-height: 10vh;
 }

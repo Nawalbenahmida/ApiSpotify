@@ -1,24 +1,24 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>{{name}} Albums</ion-title>
+    <ion-title>
+      <img class="logo" src="../../assets/img/logo.png">
+    </ion-title>
   </ion-toolbar>
 </ion-header>
 
- <h2>helooo</h2>
+
 
 <ion-content padding text-center>
+<h1>{{name}} Albums</h1>
   <div *ngIf="albums?.length>0">
     <ion-list *ngFor="let a of albums">
-      <ion-item>
-
+      <div class="detailsAlbum">
         <ion-thumbnail item-start  *ngIf="a.images?.length>0">
           <img src="{{a.images[2].url}}">
-          <span>Type: {{a.type}}</span>
-
         </ion-thumbnail>
         <h1>Album: {{a.name}}</h1>
         <button item-end (click)="detailsAlbums(a.id)" >Details</button>
-      </ion-item>
+      </div>
     </ion-list>
   </div>
 
