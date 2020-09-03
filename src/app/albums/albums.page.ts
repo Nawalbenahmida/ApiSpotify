@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NavController, NavParams } from '@ionic/angular';
+import { NavController} from '@ionic/angular';
 import { SpotifyService } from '../spotify.service';
 import { ActivatedRoute, Router } from '@angular/router';
 
@@ -14,6 +14,7 @@ export class AlbumsPage implements OnInit {
   private id: string;
   private name: string;
   private albums: any[];
+
 
   constructor(public navCtrl: NavController, private spotifyService: SpotifyService, private route: ActivatedRoute,
     private router: Router) {

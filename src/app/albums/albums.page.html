@@ -1,7 +1,7 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      <img class="logo" src="../../assets/img/logo.png">
+      <a routerLink="/home"><img class="logo" src="../../assets/img/logo.png" ></a>
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,15 +9,16 @@
 
 
 <ion-content padding text-center>
-<h1>{{name}} Albums</h1>
-  <div *ngIf="albums?.length>0">
-    <ion-list *ngFor="let a of albums">
-      <div class="detailsAlbum">
-        <ion-thumbnail item-start  *ngIf="a.images?.length>0">
-          <img src="{{a.images[2].url}}">
-        </ion-thumbnail>
-        <h1>Album: {{a.name}}</h1>
-        <button item-end (click)="detailsAlbums(a.id)" >Details</button>
+
+
+  <h1>Tous les albums et singles de {{name}}</h1>
+
+
+  <div class="container" *ngIf="albums?.length>0">
+    <ion-list class="detailsAlbums" *ngFor="let a of albums">
+      <div item-start  *ngIf="a.images?.length>0">
+        <button class="btn" item-end (click)="detailsAlbums(a.id)">
+       <h3><img class="album" src="{{a.images[1].url}}">{{a.name}}</h3></button>
       </div>
     </ion-list>
   </div>

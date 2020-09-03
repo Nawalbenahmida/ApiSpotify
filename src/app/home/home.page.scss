@@ -82,7 +82,8 @@ a:hover{
   color: #1fc655
 }
 
-img:hover{
+div.cover img:hover,
+img.artist:hover{
   opacity: 0.5;
   background: rgba(0, 0, 0, 0.5);
 }

@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-items:any[];
+  items:any[];
 
 
   constructor(public navCtrl: NavController,private spotifyService: SpotifyService, private router: Router) {

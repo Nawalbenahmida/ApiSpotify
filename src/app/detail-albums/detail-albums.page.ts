@@ -13,6 +13,8 @@ export class DetailAlbumsPage implements OnInit {
   private album: any;
   private imageLink: string;
   private tracks:any[];
+  private artists:any[]
+
 
   constructor( private spotifyService: SpotifyService,private route: ActivatedRoute,
     private router: Router, private iab: InAppBrowser) {
@@ -26,7 +28,8 @@ getAlbum(){
   this.spotifyService.searchAlbum(this.id).subscribe(
     data=>{
       this.album= data;
-      this.imageLink = this.album.images[0];
+      this.imageLink = this.album.images[1];
+      this.artists = this.album.artists;
       this.tracks = this.album.tracks.items;
       console.log(data)
     })

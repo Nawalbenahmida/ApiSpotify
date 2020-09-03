@@ -1,0 +1,85 @@
+
+ion-content, ion-header{
+
+  --ion-background-color:#222326
+}
+
+.logo {
+  width: 20vh;
+}
+
+
+
+
+// ----------------------------------TRACKS---------------------------------------------
+.play{
+width: 20px;
+height: 20px;
+display: none;
+}
+
+ion-icon{
+color:#1fc655
+}
+
+h1{
+font-size: 30px;
+font-weight: 900;
+ color:#1fc655;
+
+}
+
+h3{
+    margin: 12px;
+  font-size: 20px;
+}
+
+.play{
+margin: 14px
+}
+
+h3,  p, h2{
+color: white
+}
+
+p{
+  margin: 16px;
+}
+
+
+
+button:hover ion-icon.play{
+display: block;
+
+}
+
+button:hover h3{
+color: #1fc655;
+}
+
+ button:hover p{
+display:none;
+}
+
+
+
+button{
+  display: flex;
+  background-color: Transparent;
+  background-repeat:no-repeat;
+  border: none;
+  cursor:pointer;
+  overflow: hidden;
+  outline:none;
+  width: 100%
+}
+
+div.album{
+  display: flex;
+margin-left: 30px;
+margin-top: 25px;
+}
+
+.details{
+margin: 77px
+}

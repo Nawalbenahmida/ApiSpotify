@@ -4,20 +4,56 @@
   width: 20vh;
 }
 
-// ion-content, ion-header{
-//
-//   --ion-background-color:#222326
-// }
-//
-// ion-searchbar{
-//   --ion-background-color: white;
-// }
+ion-content, ion-header{
+
+  --ion-background-color:#222326
+}
+
+ion-searchbar{
+  --ion-background-color: white;
+}
 
 
 h1{
-// color: white;
+color: white;
 font-size: 25px;
-margin-left: 15vh;
+margin-left: 10vh;
 }
 
 // ---------------------------------------------ALBUMS--------------------------------------------
+
+.container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.btn{
+  background-color: Transparent;
+  background-repeat:no-repeat;
+  border: none;
+  cursor:pointer;
+  overflow: hidden;
+  outline:none;
+  width: 235px;
+}
+
+h3{
+font-size: 15px;
+  color: white;
+}
+
+h3:hover{
+  color: #1fc655
+}
+
+.album{
+width: 200px;
+margin: 10px;
+border-radius: inherit;
+}
+
+  img.album:hover{
+  opacity: 0.5;
+  background: rgba(0, 0, 0, 0.5);
+}
