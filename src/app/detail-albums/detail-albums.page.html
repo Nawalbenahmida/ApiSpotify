@@ -1,23 +1,18 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-<a routerLink="/home"><img class="logo" src="../../assets/img/logo.png" ></a>
-</ion-title>
+      <a routerLink="/home"><img class="logo" src="../../assets/img/logo.png" ></a>
+    </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content >
-
+<ion-content>
   <div class="album"  *ngIf="imageLink" >
     <img src="{{imageLink.url}}">
     <div class="details">
-
       <h1>{{album.name}}</h1>
       <h2 *ngFor="let a of artists" >{{a.name}}</h2>
-
     </div>
-
-
   </div>
 
   <div *ngIf="tracks?.length>0">
@@ -25,12 +20,10 @@
       <ion-item>
         <button  (click)="playTrack(t.preview_url)">
           <ion-icon class=play name="play-outline"></ion-icon>
-
           <p>{{t.track_number}}</p>
           <h3>{{t.name}}</h3>
         </button>
       </ion-item>
     </ion-list>
   </div>
-
 </ion-content>

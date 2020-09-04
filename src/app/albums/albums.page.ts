@@ -33,10 +33,10 @@ export class AlbumsPage implements OnInit {
         })
       }
 
-detailsAlbums(id:string){
-  this.router.navigate(['/detail-albums', {id:id}]);
+      detailsAlbums(id:string){
+        this.router.navigate(['/detail-albums', {id:id}]);
 
-}
+      }
 
 
   ngOnInit() {

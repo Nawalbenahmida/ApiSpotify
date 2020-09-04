@@ -6,8 +6,6 @@
   </ion-toolbar>
 </ion-header>
 
-
-
 <ion-content padding >
   <ion-searchbar placeholder="Recherchez des artistes" (ionInput)="search($event)"></ion-searchbar>
   <div *ngIf="items?.length>0">
@@ -19,7 +17,7 @@
       </div>
     </ion-list>
   </div>
-<h1>Playlists populaires</h1>
+  <h1>Playlists populaires</h1>
   <div class="cover">
     <a href="#"><img   src="../../assets/img/summer.jpg">Votre Summer Flashback</a>
     <a href="#"><img   src="../../assets/img/tube.jfif">Tubes de l'été</a>

@@ -15,9 +15,9 @@ ion-searchbar{
 
 
 h1{
-color: white;
-font-size: 25px;
-margin-left: 10vh;
+  color: white;
+  font-size: 25px;
+  margin-left: 10vh;
 }
 
 // ---------------------------------------------ALBUMS--------------------------------------------
@@ -39,7 +39,7 @@ margin-left: 10vh;
 }
 
 h3{
-font-size: 15px;
+  font-size: 15px;
   color: white;
 }
 
@@ -48,12 +48,12 @@ h3:hover{
 }
 
 .album{
-width: 200px;
-margin: 10px;
-border-radius: inherit;
+  width: 200px;
+  margin: 10px;
+  border-radius: inherit;
 }
 
-  img.album:hover{
+img.album:hover{
   opacity: 0.5;
   background: rgba(0, 0, 0, 0.5);
 }

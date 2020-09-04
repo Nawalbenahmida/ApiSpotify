@@ -21,27 +21,25 @@ export class DetailAlbumsPage implements OnInit {
 
       this.id = this.route.snapshot.paramMap.get('id');
       this.getAlbum();
-
     }
 
-getAlbum(){
-  this.spotifyService.searchAlbum(this.id).subscribe(
-    data=>{
-      this.album= data;
-      this.imageLink = this.album.images[1];
-      this.artists = this.album.artists;
-      this.tracks = this.album.tracks.items;
-      console.log(data)
-    })
-}
+    getAlbum(){
+      this.spotifyService.searchAlbum(this.id).subscribe(
+        data=>{
+          this.album= data;
+          this.imageLink = this.album.images[1];
+          this.artists = this.album.artists;
+          this.tracks = this.album.tracks.items;
+          console.log(data)
+        })
+      }
 
-
-playTrack(url: string){
-  let options : InAppBrowserOptions = {
-    zoom : 'no'
-  }
-this.iab.create(url, '_self', options)
-}
+      playTrack(url: string){
+        let options : InAppBrowserOptions = {
+          zoom : 'no'
+        }
+        this.iab.create(url, '_self', options)
+      }
 
 
 
